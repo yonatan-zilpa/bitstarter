@@ -3,15 +3,15 @@ var app = express();
 app.use(express.logger());
 
 app.get('/', function(request, response) {
-  response.send("hello world");
+/*  response.send("hello world"); */
 });
 
-
-  /*fs.redFile('./index.html', function (err, data) {
+var fs=require('fs');
+  fs.redFile('./index.html', function (err, data) {
 	  if (err) throw err;
 	  console.log(data);
 	});
-	*/
+	
 
 
 
