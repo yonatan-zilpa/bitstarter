@@ -3,16 +3,7 @@ var app = express();
 app.use(express.logger());
 
 
-/*app.get('/', function(request, response) {
-  response.send("hello world");
-});
-var fs=require('./index.html');
-
-  fs.redFile('index.html', function (err, data) {
-	  if (err) throw err;
-	  console.log(data);
-	});
-*/
+app.get('/', function(request, response) {
 fs = require('fs')
 fs.readFile('./index.html', 'utf8', function (err,data) {
   if (err) {
@@ -20,6 +11,17 @@ fs.readFile('./index.html', 'utf8', function (err,data) {
   }
   console.log(data);
 });
+
+
+});
+/* response.send("hello world");
+var fs=require('./index.html');
+
+  fs.redFile('index.html', function (err, data) {
+	  if (err) throw err;
+	  console.log(data);
+	});
+*/
 
 
 var port = process.env.PORT || 5000;
