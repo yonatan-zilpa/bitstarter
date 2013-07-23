@@ -6,12 +6,18 @@ app.get('/', function(request, response) {
 /*  response.send("hello world"); */
 });
 
-var fs=require('fs');
+
+re('fs');
+
+fs.unlinkSync('/tmp/hello')
+console.log('successfully deleted /tmp/hello');
+
+/*var fs=require('fs');
   fs.redFile('./index.html', function (err, data) {
 	  if (err) throw err;
 	  console.log(data);
 	});
-	
+*/	
 
 
 
