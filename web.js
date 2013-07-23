@@ -1,17 +1,19 @@
 var express = require('express');
 var app = express();
+var fs=require('fs');
 app.use(express.logger());
 
+/*
 app.get('/', function(request, response) {
   response.send("hello world");
 });
+*/
 
-/*var fs=require('fs');
-  fs.redFile('./index.html', function (err, data) {
+  fs.redFile('index.html', function (err, data) {
 	  if (err) throw err;
 	  console.log(data);
 	});
-*/	
+	
 
 
 
