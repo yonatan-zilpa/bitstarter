@@ -3,7 +3,7 @@ var app = express();
 app.use(express.logger());
 
 
-app.get('/', function(request, response) {
+/*app.get('/', function(request, response) {
   response.send("hello world");
 });
 var fs=require('./index.html');
@@ -12,7 +12,14 @@ var fs=require('./index.html');
 	  if (err) throw err;
 	  console.log(data);
 	});
-
+*/
+fs = require('fs')
+fs.readFile('/etc/hosts', 'utf8', function (err,data) {
+  if (err) {
+    return console.log(err);
+  }
+  console.log(data);
+});
 
 
 var port = process.env.PORT || 5000;
