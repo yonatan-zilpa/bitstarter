@@ -3,14 +3,8 @@ var app = express();
 app.use(express.logger());
 
 app.get('/', function(request, response) {
-/*  response.send("hello world"); */
+  response.send("hello world");
 });
-
-
-re('fs');
-
-fs.unlinkSync('/tmp/hello')
-console.log('successfully deleted /tmp/hello');
 
 /*var fs=require('fs');
   fs.redFile('./index.html', function (err, data) {
